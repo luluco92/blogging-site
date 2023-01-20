@@ -1,0 +1,10 @@
+<section>
+<h1>{{xx.username}}'s blogs</h1>
+<hr>
+{{#each xx.blogs as |x|}}
+<a href="/blog/{{x.id}}">
+<h1>{{x.title}}</h1>
+    <!--<img src="/images/{{paintings.[0].filename}}" alt="{{x.content}}">-->
+  </a>
+{{/each}}
+</section>
