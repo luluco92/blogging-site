@@ -71,6 +71,10 @@ figure {
   margin-right: 10px;
 }
 
+article {
+  padding-left: 8px;
+  flex: 1 0 100%;
+}
 
 aside {
   background-color: lightgreen;

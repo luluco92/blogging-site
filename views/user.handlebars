@@ -1,10 +1,16 @@
-<section>
-<h1>{{xx.username}}'s blogs</h1>
-<hr>
+<article>
+{{#if loggedIn}}
+<h2>{{xx.username}}'s Blogs</h2>
+<hr><br/>
 {{#each xx.blogs as |x|}}
 <a href="/blog/{{x.id}}">
-<h1>{{x.title}}</h1>
-    <!--<img src="/images/{{paintings.[0].filename}}" alt="{{x.content}}">-->
-  </a>
+<span style="font-weight:bold;font-family:Verdana;font-size:24px">{{x.title}}</span>
+  </a><span>- {{format_date x.updatedAt}}</span>
+<br/><br/>
 {{/each}}
-</section>
+{{else}}
+<a href="/login">You must login first to view this page.</a>
+{{/if}}
+</article>
+<!-- This is the form for adding a new blog 
+we need 2 new pages: a my dashboard and an add blog form-->

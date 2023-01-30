@@ -13,8 +13,16 @@
        <nav>
          <ul>
           <li><a href="/">Home</a></li>
+    {{#if loggedIn}}
+          <li><a href="/my">My Blogs</a></li>
+    {{else}}
           <li><a href="/login">Login</a></li>
+    {{/if}}
+    {{#if loggedIn}}
+          <li id="logout" style="cursor:pointer">Logout</li>
+    {{else}}
           <li><a href="/signup">Signup</a></li>
+    {{/if}}
          </ul>
        </nav>
     </header>
@@ -22,4 +30,7 @@
         {{{ body }}}
       </main>
   </div>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body></html>

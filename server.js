@@ -19,6 +19,12 @@ const sess = {
   secret: 'Super secret secret',
   cookie: {// Stored in milliseconds
     maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    // prevent javascript access to cookie
+    httpOnly: true,
+    // encrypts cookie over HTTPS only if true
+    secure: false,
+    // prevents sending cookies to another website
+    sameSite: 'strict',
   },
   resave: false,
   saveUninitialized: true,

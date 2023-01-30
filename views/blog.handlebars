@@ -1,13 +1,13 @@
-<section>
+<article>
   <h2>
     {{xx.title}}
   </h2>
     <p>
-      By:
-      {{xx.user_id}}
+      By: 
+      {{xx.user.username}}
     </p>
       {{#if xx.updatedAt}}
-<p>Last updated on {{xx.updatedAt}}</p>
+<p>Last updated on {{format_date xx.updatedAt}}</p>
 {{/if}}
     &nbsp;
   <div>
@@ -15,4 +15,27 @@
       {{xx.content}}
     </p>
   </div>
-</section>
+<br/><hr>
+  <div><h3>Comments</h3>
+    {{#each xx.comments as |x|}}
+      {{> comment-details}}
+      {{else}}
+    <h4>No comments yet!</h4>   
+    {{/each}}
+<br/><h4>Add Comment</h4>
+    <form class='new-comment-form'>
+      <br />
+      <textarea rows='5' cols='48'></textarea>
+<br/><p id='displayerr' style="color:red;"></p>
+<br/>
+{{#if loggedIn}}
+<button style="width:100px" type='submit' value='Submit'>
+        Submit
+      </button>
+{{else}}
+<a href="/login">You must login first to add a comment.</a>
+{{/if}}
+    </form>
+  </div>
+</article>
+<script src='/js/add-comment.js'></script>

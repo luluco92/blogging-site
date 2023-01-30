@@ -1,0 +1,18 @@
+<article>
+{{#if loggedIn}}
+<h2>My Blogs <a href="/addblog" title="Add New Blog"><h5 style="display:inline;">&#128221;</h5></a></h2>
+<hr><br/>
+<br/>
+{{#each xx.blogs as |x|}}
+<div>
+<a href="/blog/{{x.id}}">
+<span style="font-weight:bold;font-family:Verdana;font-size:24px">{{x.title}}</span>
+  </a><span>- {{format_date x.updatedAt}}</span> <span title="Edit Blog" onclick="putblog(this)" style="cursor:pointer;">&#9999;&#65039;</span> <span title="Delete Blog" style="cursor:pointer;" onclick="delblog(this)">&#128465;&#65039;</span>
+</div>
+<br/><br/>
+{{/each}}
+{{else}}
+<a href="/login">You must login first to view this page.</a>
+{{/if}}
+</article>
+<script src='js/myblog.js'></script>

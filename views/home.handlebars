@@ -1,9 +1,9 @@
-<!--{{#each galleries as |x|}}
-<section class="card">
-  <a href="/blog/{{id}}">
-    <header>{{title}}</header>
-    <img src="/images/{{paintings.[0].filename}}" alt="{{paintings.[0].description}}">
-  </a>
-</section>
-{{/each}}-->
-<h2>CHAINSAW MAN</h2>
+<article>
+<h3>Check out our Blogs!</h3>
+{{#each xx as |x|}}
+<br/><h4><a href="/blog/{{x.id}}">{{x.title}}</a></h4> <span>{{format_date x.updatedAt}} - by {{x.user.username}}</span>
+<p>{{truncate x.content}}</p>
+{{/each}}
+<h2> </h2>
+</article>
+
