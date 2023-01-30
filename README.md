@@ -15,7 +15,7 @@ A basic blogging site with account session functionality. See usage information 
 
 ## Installation Instructions
 
-First run db/schema.sql in MySQL to create a database. Then install the npm packages by typing 'npm i' in the console after you have navigated to the program's directory. Finally run 'node server.js' and the website will be ready to go on your MySQL server.
+First run db/schema.sql in MySQL to create a database. Create a .env file in the program folder that the program can use to access your MySQL server credentials. Then install the npm packages by typing 'npm i' in the console after you have navigated to the program's directory. Finally run 'node server.js' and the website will be ready to go on your MySQL server. 
 
 ## Usage Information
 
