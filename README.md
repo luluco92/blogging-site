@@ -2,7 +2,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 ## Description
 
-Blogging is so last decade, why not do it on a site that looks just as archaic.
+Blogging is so last decade.
 
 ## Table of Contents
 
