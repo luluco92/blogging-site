@@ -2,7 +2,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 ## Description
 
-Blogging is so last decade.
+A basic blogging site with account session functionality. See usage information for details.
 
 ## Table of Contents
 
